@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import request from "supertest"; // api call
-import { createToken } from "./fungction/createToken.specs";
+import { createToken } from "../spces/fungction/createToken.specs.js";
 
 
 const baseUrl = "https://restful-booker.herokuapp.com"; // base url
@@ -36,7 +36,7 @@ describe("Get Token Booking Scenario", () => {
             .put("/booking/"+bookingId)
             .send(payload)
             .set("cookie",token)
-    })
+    });
 
     it("import token"), async () => {
         const token = await createToken()
