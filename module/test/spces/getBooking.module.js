@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import request from "supertest"; // api call
-import { getBooking } from "../function/getBooking.specs.js";
+import { getBooking } from "../function/getBooking.spec.js";
 
 const paramFirstName = "sally";
 const paramLastName = "brown";

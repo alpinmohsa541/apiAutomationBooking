@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import { createBooking } from "../function/createBooking.spec.js";
-import { getBooking } from "../function/getBooking.specs.js";
-import {createToken} from "../function/createToken.specs.js"
+import { getBooking } from "../function/getBooking.spec.js";
+import {createToken} from "../function/createToken.spec.js"
 import { updateBooking } from "../function/updateBooking.spec.js";
 
 describe("End to end - Booking", () =>{
