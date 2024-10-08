@@ -1,8 +1,8 @@
 import { expect } from "chai";
-import { createBooking } from "../fungction/createBooking.spec.js";
-import { getBooking } from "../fungction/getBooking.specs.js";
-import {createToken} from "../fungction/createToken.specs.js"
-import { updateBooking } from "../fungction/updateBooking.spec.js";
+import { createBooking } from "../function/createBooking.spec.js";
+import { getBooking } from "../function/getBooking.specs.js";
+import {createToken} from "../function/createToken.specs.js"
+import { updateBooking } from "../function/updateBooking.spec.js";
 
 describe("End to end - Booking", () =>{
     let token;
