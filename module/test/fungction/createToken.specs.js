@@ -1,6 +1,6 @@
 import request from "supertest";
 
-import { baseUrl } from "../../../data/config.js";
+import { baseUrl } from "../../data/config.js";
 
 export async function createToken(){
     const payload = {

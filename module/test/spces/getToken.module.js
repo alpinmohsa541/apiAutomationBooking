@@ -30,17 +30,40 @@ describe("Get Token Booking Scenario", () => {
         console.log(await token)
     });
 
-    it("Positive - Success update token Booking", async () =>{
+    it("Positive - Success implement token Booking", async () =>{
         //put method
         const response = await request(baseUrl)
             .put("/booking/"+bookingId)
-            .send(payload)
             .set("cookie",token)
+
+            
     });
 
-    it("import token"), async () => {
+    it("Positive - Success update token Booking", async () =>{
+        //put method
+        const payload = {
+            "firstname" : "James",
+            "lastname" : "Brown",
+            "totalprice" : 111,
+            "depositpaid" : true,
+            "bookingdates" : {
+                "checkin" : "2018-01-01",
+                "checkout" : "2019-01-01"
+            },
+            "additionalneeds" : "Breakfast"
+        }
+
+        const response = await request(baseUrl)
+            .put("/booking/" + bookingId)
+            .send(payload)
+            .set("cookie", token);
+
+        expect((await response).status).to.equal(200);
+    });
+
+    it("import token", async () => {
         const token = await createToken()
         console.log(await token)
-    }
+    })
 } )
 

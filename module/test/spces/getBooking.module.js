@@ -1,5 +1,6 @@
 import { expect } from "chai";
 import request from "supertest"; // api call
+import { getBooking } from "../fungction/getBooking.specs.js";
 
 const paramFirstName = "sally";
 const paramLastName = "brown";
@@ -39,4 +40,15 @@ describe("Get All Booking", () => {
         // expect(response.body).to.include("bookingid");
         console.log(await response.body) // menampilkan data body
     });
+
+    describe("Get Booking Scenario by Function ", ()=>{
+        it ("Success get booking all by function", async() => {
+            const response = await getBooking.all();
+            console.log((await response).status)
+
+            // assertion menggunakan chai
+             expect((await response).status).to.equal(200);
+             console.log((await response).body) // menampilkan data body
+        })
+    })
 });
